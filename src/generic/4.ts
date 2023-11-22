@@ -3,17 +3,15 @@
 */
 
 interface ComponentProps {
-  title: string
+  title: string;
 }
 
-class Component<T extends ComponentProps> {
-  constructor (public props:T) {
-
-  }
+class Component<T> {
+  constructor(public props: T) {}
 }
 
 class Page extends Component<ComponentProps> {
-  pageInfo () {
+  pageInfo() {
     console.log(this.props.title);
   }
 }
